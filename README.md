@@ -34,15 +34,17 @@ files = [
     ('files', ('file2.csv', open('file2.csv', 'rb'))),
     ('files', ('file3.csv', open('file3.csv', 'rb')))
 ]
-
-The main application module is : 
-https://nbviewer.org/github/cbittel/Coding_Challenge/blob/main/Section1_API.ipynb
-
-The test module for the application is :
-https://nbviewer.org/github/cbittel/Coding_Challenge/blob/main/test_Section1_API.ipynb
 response = requests.post(url, files=files)
 
 if response.status_code == 200:
     print(response.json())
 else:
     print("Error:", response.text)
+```
+
+
+The main application module is : 
+https://nbviewer.org/github/cbittel/Coding_Challenge/blob/main/Section1_API.ipynb
+
+The test module for the application is :
+https://nbviewer.org/github/cbittel/Coding_Challenge/blob/main/test_Section1_API.ipynb
